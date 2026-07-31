@@ -1,17 +1,19 @@
-var tasks = [];
+let tasks = [];
 
 function addTask(){
 
-    var task = document.getElementById("task").value;
+    let task = document.getElementById("task").value;
 
     if(task==""){
         alert("Empty");
+        return;
     }
 
     tasks.push(task);
 
-    document.getElementById("list").innerHTML +=
-        "<li>"+task+"</li>";
+    var li = document.createElement("li");
+    li.textContent = task;
+    document.getElementById("list").appendChild(li);
 
     console.log("Tasks:",tasks);
 
