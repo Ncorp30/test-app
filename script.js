@@ -1,11 +1,12 @@
-var tasks = [];
+let tasks = [];
 
 function addTask(){
 
-    var task = document.getElementById("task").value;
+    let task = document.getElementById("task").value;
 
     if(task==""){
         alert("Empty");
+        return;
     }
 
     tasks.push(task);
